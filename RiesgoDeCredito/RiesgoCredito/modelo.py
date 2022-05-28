@@ -11,15 +11,12 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from scipy.stats import chi2_contingency
 import pickle
 from RiesgoCredito import WoE_Binning   
-# import pickle4 as pickle
+import dill
 
 def prediccion_riesgo(dic):
-    # with open('RiesgoCredito\modelo\model.pkl',"rb") as f:
-    #     unpickler= pickle.Unpickler(f)
-    # modelo=  unpickler.load()
-    modelo= pickle.load(open('RiesgoCredito\modelo\model.pkl', 'rb'))
-    # f = open('RiesgoCredito\modelo\model.pkl',"wb")
-    # modelo= pickle.load(f)
+    
+    # modelo= pickle.load(open('RiesgoCredito\modelo\model.pkl', 'rb'))
+    modelo= dill.load(open("RiesgoCredito\modelo\model3.pkl", "rb"))
     data=pd.DataFrame(data=dic,index=[0])
     prediccion=modelo.predict_proba(data)
     return prediccion[0][1]
