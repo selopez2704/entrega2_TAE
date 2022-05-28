@@ -1,1 +1,1 @@
-web: gunicorn RiesgoDeCredito.RiesgoDeCredito.wsgi --log-file -
+web: gunicorn RiesgoDeCredito.wsgi --log-file -
