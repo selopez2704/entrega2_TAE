@@ -124,3 +124,6 @@ def respuesta(request,respuesta):
         'respuesta':respuesta,
     }
     return render(request, 'respuesta.html', context)
+def informe(request):
+    template = loader.get_template('informe.html')
+    return HttpResponse(template.render())
