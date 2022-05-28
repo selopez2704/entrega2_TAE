@@ -1,0 +1,233 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Riesgo Credito</title>
+	<link rel="stylesheet" href="{% static 'view.css' %}" />
+	<!-- <link rel="stylesheet" type="text/css" href="../static/view.css" media="all"> -->
+</head>
+<body id="main_body">
+	<img id="top" src="{% static 'top.png' %}" alt="">
+	<div id="form_container">
+		<h1><a>Riesgo Credito</a></h1>
+		<form id="input" class="appnitro" method="get" action="/RiesgoCredito/model/">
+			<div class="form_description">
+				<h2>Riesgo Credito</h2>
+				<p>TAE TRABAJO 2</p>
+				<p>Juan David Pino Ramírez</p>
+				<p>Sebastián López Mazo</p>
+				<p>Cristian ALejandro Rojas Mazo</p>
+				<p>Kevin Danilo Arias Buitrago</p>
+				<p>Santiago Carvajal Torres</p>
+			</div>
+			<ul>
+				<li id="li_18">
+					<label class="description" for="term">term </label>
+					<div>
+						<select class="element select medium" id="term" name="term">
+							<option value="1">36</option>
+							<option value="2">60</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_2">
+					<label class="description" for="int_rate">int_rate (ejm: 14.1)</label>
+					<div>
+						<input id="int_rate" name="int_rate" class="element text medium" type="number" value="5" />
+					</div>
+				</li>
+				<li id="li_17">
+					<label class="description" for="grade">grade </label>
+					<div>
+						<select class="element select medium" id="grade" name="grade">
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="E">E</option>
+							<option value="F">F</option>
+							<option value="G">G</option>
+							
+						</select>
+					</div>
+				</li>
+				<li id="li_19">
+					<label class="description" for="emp_length">emp_length </label>
+					<div>
+						<select class="element select medium" id="emp_length" name="emp_length">
+							<option value=1>1</option>
+							<option value=2>2</option>
+							<option value=3>3</option>
+							<option value=4>4</option>
+							<option value=5>5</option>
+							<option value=6>6</option>
+							<option value=7>7</option>
+							<option value=8>8</option>
+							<option value=9>9</option>
+							<option value=10>10</option>
+							
+						</select>
+					</div>
+				</li>
+				<li id="li_20">
+					<label class="description" for="home_ownership">home_ownership </label>
+					<div>
+						<select class="element select medium" id="home_ownership" name="home_ownership">
+							<option value="RENT">RENT</option>
+							<option value="OWN">OWN</option>
+							<option value="MORTGAGE">MORTGAGE</option>
+							<option value="OTHER">OTHER</option>
+							<option value="NONE">NONE</option>
+						</select>
+					</div>
+				</li>
+				<li id="li_1">
+					<label class="description" for="annual_inc">annual_inc (ejm: 50000.0) </label>
+					<div>
+						<input id="annual_inc" name="annual_inc" class="element text medium" type="number"
+							value="20000.0" />
+					</div>
+				</li>
+				<li id="li_21">
+					<label class="description" for="verification_status">verification_status </label>
+					<div>
+						<select class="element select medium" id="verification_status" name="verification_status">
+							<option value="Not Verified">Not Verified</option>
+							<option value="Source Verified">Source Verified</option>
+							<option value="Verified">Verified</option>
+							
+						</select>
+					</div>
+				</li>
+				<li id="li_22">
+					<label class="description" for="purpose">purpose </label>
+					<div>
+						<select class="element select medium" id="purpose" name="purpose">
+							<option value="car">car</option>
+							<option value="credit_card">credit_card</option>
+							<option value="debt_consolidation">debt_consolidation</option>
+							<option value="educational">educational</option>
+							<option value="home_improvement">home_improvement</option>
+							<option value="house">house</option>
+							<option value="other">other</option>
+							<option value="renewable_energy">renewable_energy</option>
+							<option value="small_business">small_business</option>
+							<option value="vacation">vacation</option>
+							<option value="wedding">wedding</option>
+							
+						</select>
+					</div>
+				</li>
+				<li id="li_3">
+					<label class="description" for="dti">dti </label>
+					<div>
+						<input id="dti" name="dti" class="element text medium" type="number" value="10.0" />
+					</div>
+				</li>
+				<li id="li_4">
+					<label class="description" for="inq_last_6mths">inq_last_6mths </label>
+					<div>
+						<input id="inq_last_6mths" name="inq_last_6mths" class="element text medium" type="number"
+							value="8.2" />
+							
+					</div>
+				</li>
+				<li id="li_5">
+					<label class="description" for="revol_util">revol_util </label>
+					<div>
+						<input id="revol_util" name="revol_util" class="element text medium" type="number"
+							value="100.22" />
+						</div>
+					</li>
+					<li id="li_6">
+						<label class="description" for="total_acc">total_acc </label>
+						<div>
+							<input id="total_acc" name="total_acc" class="element text medium" type="number" value="50.1" />
+						</div>
+				</li>
+				<li id="li_7">
+					<label class="description" for="out_prncp">out_prncp </label>
+					<div>
+						<input id="out_prncp" name="out_prncp" class="element text medium" type="number"
+							value="11681.54" />
+					</div>
+				</li>
+				<li id="li_8">
+					<label class="description" for="total_pymnt">total_pymnt </label>
+					<div>
+						<input id="total_pymnt" name="total_pymnt" class="element text medium" type="number"
+							value="34919.98425" />
+					</div>
+				</li>
+				<li id="li_9">
+					<label class="description" for="total_rec_int">total_rec_int </label>
+					<div>
+						<input id="total_rec_int" name="total_rec_int" class="element text medium" type="number"
+						value="10172.31" />
+					</div>
+				</li>
+				<li id="li_10">
+					<label class="description" for="last_pymnt_amnt">last_pymnt_amnt </label>
+					<div>
+						<input id="last_pymnt_amnt" name="last_pymnt_amnt" class="element text medium" type="number"
+						value="6234.44" />
+					</div>
+				</li>
+				<li id="li_11">
+					<label class="description" for="tot_cur_bal">tot_cur_bal </label>
+					<div>
+						<input id="tot_cur_bal" name="tot_cur_bal" class="element text medium" type="number"
+						value="1158254.0" />
+					</div>
+				</li>
+				<li id="li_12">
+					<label class="description" for="total_rev_hi_lim">total_rev_hi_lim </label>
+					<div>
+						<input id="total_rev_hi_lim" name="total_rev_hi_lim" class="element text medium" type="number"
+							value="12" />
+					</div>
+				</li>
+				<li id="li_13">
+					<label class="description" for="mths_since_earliest_cr_line">mths_since_earliest_cr_line </label>
+					<div>
+						<input id="mths_since_earliest_cr_line" name="mths_since_earliest_cr_line"
+							class="element text medium" type="number" value="2" />
+					</div>
+				</li>
+				<li id="li_14">
+					<label class="description" for="mths_since_issue_d">mths_since_issue_d </label>
+					<div>
+						<input id="mths_since_issue_d" name="mths_since_issue_d" class="element text medium"
+						type="number" value="5" />
+					</div>
+				</li>
+				<li id="li_15">
+					<label class="description" for="mths_since_last_pymnt_d">mths_since_last_pymnt_d </label>
+					<div>
+						<input id="mths_since_last_pymnt_d" name="mths_since_last_pymnt_d" class="element text medium"
+						type="number" value="3" />
+					</div>
+				</li>
+				<li id="li_16">
+					<label class="description" for="mths_since_last_credit_pull_d">mths_since_last_credit_pull_d
+					</label>
+					<div>
+						<input id="mths_since_last_credit_pull_d" name="mths_since_last_credit_pull_d"
+							class="element text medium" type="number" value="7" />
+						</div>
+					</li>
+
+					<li class="buttons">
+					<input type="hidden" name="form_id" value="40170" />
+
+					<input id="saveForm" class="button_text" type="submit" name="submit" value="Enviar" />
+				</li>
+			</ul>
+		</form>
+	</div>
+	<img id="bottom" src="{% static 'bottom.png' %}" alt="">
+</body>
+<!-- <script type="text/javascript" src="{% static 'view.js' %}"></script> -->
+</html>
