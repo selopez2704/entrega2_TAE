@@ -16,7 +16,7 @@ import dill
 def prediccion_riesgo(dic):
     
     # modelo= pickle.load(open('RiesgoCredito\modelo\model.pkl', 'rb'))
-    modelo= dill.load(open("RiesgoCredito\modelo\model3.pkl", "rb"))
+    modelo= dill.load(open("RiesgoCredito\modelo\model.pkl", "rb"))
     data=pd.DataFrame(data=dic,index=[0])
     prediccion=modelo.predict_proba(data)
     return prediccion[0][1]
