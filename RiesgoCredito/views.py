@@ -7,7 +7,7 @@ from RiesgoCredito.utils import valor
 
 
 def rredirect(request):
-    return redirect('../RiesgoCredito/index/')
+    return redirect('/RiesgoCredito/index/')
 
 def index(request):
     template = loader.get_template('index.html')
