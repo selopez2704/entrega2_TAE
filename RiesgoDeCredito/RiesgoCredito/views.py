@@ -5,6 +5,7 @@ from numpy import double
 from RiesgoCredito.modelo import prediccion_riesgo
 from RiesgoCredito.utils import valor
 
+
 def rredirect(request):
     return redirect('/RiesgoCredito/index/')
 
