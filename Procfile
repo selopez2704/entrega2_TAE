@@ -1,1 +1,0 @@
-web: gunicorn RiesgoDeCredito.RiesgoDeCredito.wsgi --log-file -
