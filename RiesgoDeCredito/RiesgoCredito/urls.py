@@ -2,7 +2,9 @@ from django.urls import path
 from django.conf.urls.static import static
 from . import views
 from django.conf import settings
+
 urlpatterns = [
+    path('',views.rredirect, name='rredirect'),
     path('index/', views.index, name='index'),
     path('model/', views.model, name='model'),
     path('respuesta/<respuesta>/', views.respuesta, name='respuesta'),

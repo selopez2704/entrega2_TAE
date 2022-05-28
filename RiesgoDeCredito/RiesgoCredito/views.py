@@ -5,6 +5,9 @@ from numpy import double
 from RiesgoCredito.modelo import prediccion_riesgo
 from RiesgoCredito.utils import valor
 
+def rredirect(request):
+    return redirect('/RiesgoCredito/index/')
+
 def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
