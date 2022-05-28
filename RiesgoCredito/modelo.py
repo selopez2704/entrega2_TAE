@@ -14,8 +14,9 @@ from RiesgoCredito import WoE_Binning
 import dill
 
 def prediccion_riesgo(dic):
-    
-    # modelo= pickle.load(open('RiesgoCredito\modelo\model.pkl', 'rb'))
+    #Remoto
+    modelo= dill.load(open("\modelo\model.pkl", "rb"))
+    #local
     modelo= dill.load(open("RiesgoCredito\modelo\model.pkl", "rb"))
     data=pd.DataFrame(data=dic,index=[0])
     prediccion=modelo.predict_proba(data)
